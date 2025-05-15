@@ -14,6 +14,9 @@ WORKDIR /usr/src/app
 # ENV npm_config_fetch_retry_maxtimeout=240000
 # ENV npm_config_fetch_retries=5
 
+# Instalar procps que contiene el comando ps
+RUN apt-get update && apt-get install -y procps && rm -rf /var/lib/apt/lists/*
+
 # COPY package.json ./
 # COPY package-lock.json ./
 COPY package*.json ./
