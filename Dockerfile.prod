@@ -41,6 +41,7 @@ COPY --from=build /usr/src/app/node_modules ./node_modules
 # Copiar la carpeta de DIST
 COPY --from=build /usr/src/app/dist ./dist
 
+# variables de entorno
 ENV NODE_ENV=production
 
 USER node
